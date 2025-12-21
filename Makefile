@@ -6,7 +6,7 @@
 include build.mk
 
 test:
-	cd .. && sbt "project soc" test
+	sbt test
 
 verilator:
 	@if java -version >/dev/null 2>&1; then \
@@ -54,7 +54,7 @@ compliance: check-riscof
 	@echo "📊 View report: results/report.html"
 
 clean:
-	cd .. && sbt "project soc" clean
+	sbt clean
 	$(RM) -r test_run_dir
 	$(RM) -r verilog/verilator/obj_dir
 	$(RM) verilog/verilator/*.v
