@@ -72,6 +72,13 @@ object InstructionsTypeM {
   val remu   = 7.U
 }
 
+object InstructionsTypeZba {
+  val funct7 = "b0010000".U
+  val sh1add = "b010".U
+  val sh2add = "b100".U
+  val sh3add = "b110".U
+}
+
 object InstructionsTypeB {
   val beq  = "b000".U
   val bne  = "b001".U
